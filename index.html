@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris - Gameboy</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAACgUAAAYGCgD///8A29vbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAQEBAQEBAQEBAAAAAAAAAQMDAwMDAwMDAwMDAwAAAAEDAwEDAwMDAwMDAwMAAAABAwEBAQMDAwEDAQMDAAAAAQMDAQMDAwMDAwMDAwABAAEDAwMDAwMDAwMDAwMAAAABAwEBAQEBAQEBAQEDAQAAAQMBBAQEBAQEBAQBAwEAAAEDAQQEBAQEBAQEAQMBAAABAwIEBAQEBAQEBAEDAQAAAQMBBAQEBAQEBAQBAwEAAAEDAQQEBAQEBAQEAQMBAAABAwEBAQEBAQEBAQEDAQAAAQMDAwMDAwMDAwMDAwEAAAEBAQEBAQEBAQEBAQEBAMABAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIAAAACAAAAAgAAAAIABAAA=" rel="icon" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="explicacao">
+        
+        <div class="som-icon">
+            <img src="imagens/volume-up.svg" alt="imagem-som" id="icon-som">
+        </div>
+        <h2 class="titulo-pixel">Para jogar</h2>
+        <p class="texto-pixel">Use as teclas: <br><br><img class="wasd" src="imagens/pixelart-wasd.png" alt="wasd"> ou <img class="wasd" src="imagens/setas.png" alt=""> <br><br>para mover os blocos.</p>
+        
+    </div>
+    <div class="game-boy">
+        <div class="tela1">
+            <div class="linha"></div>
+            <div class="linha2"></div>
+            <div class="ligado-desligado"></div>
+            <div class="tela-do-jogo">
+                <div class="div-score">
+                    <p class="p-score">
+                        Score: <span id="score"></span>
+                    </p>
+                </div>
+                <canvas id="tetris" width="120" height="120"></canvas>
+            </div>
+        </div>
+        <div class="setas">
+            <div class="seta-cima" id="seta-cima"></div>
+            <div class="seta-baixo" id="seta-baixo"></div>
+            <div class="seta-esquerda" id="seta-esquerda"></div>
+            <div class="seta-direita" id="seta-direita"></div>
+            <div class="centro-height"></div>
+            <div class="centro-width"></div>
+        </div>
+        <div class="titulo">
+            <div class="nintendo">nintendo</div>
+            <div class="gb">GAME BOY ™</div>
+        </div>
+        <div class="botoes">
+            <div class="botao-cima"></div>
+            <div class="botao-baixo"></div>
+        </div>
+        <div class="botoes-ab">
+            <div class="botao-a">A</div>
+            <div class="botao-b">B</div>
+        </div>
+        <div class="start-select">
+            <div class="start"></div>
+            <div class="select"></div>
+        </div>
+        <div class="t-start-select">
+            <div class="t-start">start</div>
+            <div class="t-select">select</div>
+        </div>
+        <div class="saida-som">
+            <div class="som"></div>
+            <div class="som"></div>
+            <div class="som"></div>
+            <div class="som"></div>
+            <div class="som"></div>
+            <div class="som"></div>
+            
+        </div>
+    </div>
+
+    <audio id="mySong" loop="loop">
+        <source src="tetris.mp3" type="audio/mp3">
+    </audio>
+
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+    <script src="js/piece.js"></script>
+    <script src="js/skeletons.js"></script>
+    <script src="js/functions.js"></script>
+    <script src="js/game.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
