@@ -10,6 +10,19 @@ body {
     background: #E0E9C4;
 }
 
+.cabecalho-logo {
+    font-family: "Pixel","Dancing Script" , "Rubik" , sans-serif;
+    font-size: 24px;
+    color: #06040a;
+    text-decoration: none;
+    position: absolute;
+    bottom: 92%;
+}
+
+.cabecalho-logo span{
+    color: red;
+}
+
 .som-icon {
     left: 92%;
     bottom: 90%;
